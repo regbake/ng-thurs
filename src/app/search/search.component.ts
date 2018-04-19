@@ -17,8 +17,9 @@ export class SearchComponent implements OnInit {
 
   handleSubmit(value) {
     console.log("YOU SUBMITTED!", this.testVal);
+    let apiKey = 'znnuLYP0IshD6hWh31CAnDd73rWlfiZyAArphHpw';
 
-    this.http.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    this.http.get('https://api.nasa.gov/planetary/apod' + '?date=2017-06-20' + '&api_key=' + apiKey)
       .subscribe(data => {
         console.log(data);
     });
