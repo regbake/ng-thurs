@@ -10,6 +10,19 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
+  handleSubmit(value) {
+    console.log("YOU SUBMITTED!", this.testVal)
+  }
+
+  handleInput(event){
+    this.testVal = event.target.value;
+
+    console.log(this.test)
+  }
+
+  testVal = "fubar"
 
 }

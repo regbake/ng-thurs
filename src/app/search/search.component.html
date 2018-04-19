@@ -1,6 +1,6 @@
 <h2>Search for a day to get the planetary information</h2>
 
-<form action="/search">
-  <input type="text" />
-  <button type="submit">submit </button>
+<form name="search-input">
+  <input type="text" [value]="testVal" (input)="handleInput($event)" />
+  <button type="button" (click)="handleSubmit()">submit </button>
 </form>
