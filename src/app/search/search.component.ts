@@ -8,6 +8,13 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  testVal = "fubar";
+  imageData = {
+    imageUrl: '',
+    date: '',
+    explanation: '',
+    copyright: ''
+  }
 
   constructor(private http:HttpClient) { }
 
@@ -19,10 +26,18 @@ export class SearchComponent implements OnInit {
     console.log("YOU SUBMITTED!", this.testVal);
     let apiKey = 'znnuLYP0IshD6hWh31CAnDd73rWlfiZyAArphHpw';
 
-    this.http.get('https://api.nasa.gov/planetary/apod' + '?date=2017-06-20' + '&api_key=' + apiKey)
+    this.http.get('https://api.nasa.gov/planetary/apod?date=' + this.testVal + '&api_key=' + apiKey)
       .subscribe(data => {
         console.log(data);
+
+        this.imageData.imageUrl = data.url;
+        this.imageData.date = data.date;
+        this.imageData.explanation = data.explanation;
+        this.imageData.copyright = data.copyright;
+
     });
+
+
   }
 
   handleInput(event){
@@ -30,7 +45,4 @@ export class SearchComponent implements OnInit {
 
     console.log(this.testVal)
   }
-
-  testVal = "fubar"
-
 }
