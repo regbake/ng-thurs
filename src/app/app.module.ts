@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
+import { ArchiveComponent } from './archive/archive.component';
 
+export const ROUTES: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'archive', component: ArchiveComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    ArchiveComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
