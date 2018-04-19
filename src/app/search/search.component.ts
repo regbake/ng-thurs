@@ -30,19 +30,17 @@ export class SearchComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
 
-        this.imageData.imageUrl = data.url;
-        this.imageData.date = data.date;
-        this.imageData.explanation = data.explanation;
-        this.imageData.copyright = data.copyright;
+        this.imageData = {
+          imageUrl: data.url,
+          date: data.date,
+          explanation: data.explanation,
+          copyright: data.copyright
+        }
 
     });
-
-
   }
 
   handleInput(event){
     this.testVal = event.target.value;
-
-    console.log(this.testVal)
   }
 }

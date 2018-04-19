@@ -6,8 +6,8 @@
   <button type="button" (click)="handleSubmit()">submit </button>
 </form>
 
-<p> date: {{ imageData.date }} </p>
-<p> {{ imageData.explanation }} </p>
-<p> copyright: {{ imageData.copyright }} </p>
+<p *ngIf=" imageData.date != '' "> date: {{ imageData.date }} </p>
+<p *ngIf=" imageData.explanation != '' "> {{ imageData.explanation }} </p>
+<p *ngIf=" imageData.copyright != '' "> copyright: {{ imageData.copyright }} </p>
 
-<img [src]='imageData.imageUrl' />
+<img [src]='imageData.imageUrl' *ngIf=" imageData.imageUrl != '' " />
