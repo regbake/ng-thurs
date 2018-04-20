@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DayService } from '../day.service';
+
 @Component({
   selector: 'app-archive',
   templateUrl: './archive.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArchiveComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dayService: DayService) { }
 
   ngOnInit() {
   }

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ArchiveComponent } from './archive/archive.component';
+import { DayService } from './day.service';
 
 export const ROUTES: Routes = [
   { path: '', component: AppComponent },
@@ -24,7 +25,7 @@ export const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     HttpClientModule
   ],
-  providers: [],
+  providers: [ DayService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

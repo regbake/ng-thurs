@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+import { DayService } from '../day.service';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -16,7 +18,7 @@ export class SearchComponent implements OnInit {
     copyright: ''
   }
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient, private dayService: DayService) { }
 
   ngOnInit() {
 
