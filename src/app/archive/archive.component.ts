@@ -14,7 +14,10 @@ export class ArchiveComponent implements OnInit {
 
   ngOnInit() {
     this.dayService.cast.subscribe(day =>
-      this.dailyData.push(day);
+
+      for (let i=0; i<day.length; i++){
+        this.dailyData.push(day[i]);
+      }
 
       console.log("FROM ARCHIVE: ", this.dailyData)
     );

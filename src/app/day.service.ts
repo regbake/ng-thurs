@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class DayService {
   dayTest = "Howdy from the service!";
 
-  private day = new BehaviorSubject<string>('FOOBAR')
+  private day = new BehaviorSubject<string>('')
   cast = this.day.asObservable();
 
   constructor() { }
