@@ -13,6 +13,7 @@ export class ArchiveComponent implements OnInit {
   constructor(private dayService: DayService) { }
 
   ngOnInit() {
+    this.dayService.cast.subscribe(day => this.dailyData.push(day);
   }
 
 }

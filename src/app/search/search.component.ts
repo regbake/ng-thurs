@@ -9,6 +9,7 @@ import { DayService } from '../day.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
+
 export class SearchComponent implements OnInit {
   testVal = "fubar";
   imageData = {
@@ -43,7 +44,7 @@ export class SearchComponent implements OnInit {
       //
       // });
 
-      this.dayService.addDay("TEST DAY")
+      this.dayService.addDay(this.testVal)
   }
 
   //binds the data
