@@ -8,6 +8,7 @@ import { DayService } from '../day.service';
   styleUrls: ['./archive.component.css']
 })
 export class ArchiveComponent implements OnInit {
+  dailyData = [];
 
   constructor(private dayService: DayService) { }
 

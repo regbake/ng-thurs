@@ -19,6 +19,7 @@ export class SearchComponent implements OnInit {
   }
 
   constructor(private http: HttpClient, private dayService: DayService) { }
+  foo: string;
 
   ngOnInit() {
 
