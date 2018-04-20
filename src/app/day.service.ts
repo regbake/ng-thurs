@@ -5,6 +5,16 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class DayService {
   dayTest = "Howdy from the service!";
 
+  private day = new BehaviorSubject<string>('FOOBAR')
+  cast = this.day.asObservable();
+
   constructor() { }
+
+  addDay(day) {
+    console.log("I AM STUCK IN THE addDay() !!!");
+    
+    this.day.next(day)
+
+  }
 
 }

@@ -2,3 +2,7 @@
 <h2>Shows a list of all days and images searched!</h2>
 
 <p> initial testing: {{ dayService.dayTest }} </p>
+
+<ul *ngFor="let days of dailyData" >
+  <li> {{ days }} </li>
+</ul>

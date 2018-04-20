@@ -25,24 +25,28 @@ export class SearchComponent implements OnInit {
 
   }
 
+  //submits data
   handleSubmit(value) {
-    console.log("YOU SUBMITTED!", this.testVal);
-    let apiKey = 'znnuLYP0IshD6hWh31CAnDd73rWlfiZyAArphHpw';
+      console.log("YOU SUBMITTED!", this.testVal);
+      let apiKey = 'znnuLYP0IshD6hWh31CAnDd73rWlfiZyAArphHpw';
 
-    this.http.get('https://api.nasa.gov/planetary/apod?date=' + this.testVal + '&api_key=' + apiKey)
-      .subscribe(data => {
-        console.log(data);
+      // this.http.get('https://api.nasa.gov/planetary/apod?date=' + this.testVal + '&api_key=' + apiKey)
+      //   .subscribe(data => {
+      //     console.log(data);
+      //
+      //     this.imageData = {
+      //       imageUrl: data.url,
+      //       date: data.date,
+      //       explanation: data.explanation,
+      //       copyright: data.copyright
+      //     }
+      //
+      // });
 
-        this.imageData = {
-          imageUrl: data.url,
-          date: data.date,
-          explanation: data.explanation,
-          copyright: data.copyright
-        }
-
-    });
+      this.dayService.addDay("TEST DAY")
   }
 
+  //binds the data
   handleInput(event){
     this.testVal = event.target.value;
   }
