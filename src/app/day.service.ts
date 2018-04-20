@@ -10,10 +10,18 @@ export class DayService {
 
   constructor() { }
 
+  dayArray = [];
+
+  showDays(){
+    console.log("day array: ", this.dayArray)
+  }
+
   addDay(day) {
     console.log("I AM STUCK IN THE addDay() !!!");
-    
-    this.day.next(day)
+    // this.showDays();
+    this.dayArray.push(day)
+
+    this.day.next(this.dayArray)
 
   }
 

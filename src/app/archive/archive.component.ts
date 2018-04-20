@@ -13,7 +13,12 @@ export class ArchiveComponent implements OnInit {
   constructor(private dayService: DayService) { }
 
   ngOnInit() {
-    this.dayService.cast.subscribe(day => this.dailyData.push(day);
+    this.dayService.cast.subscribe(day =>
+      this.dailyData.push(day);
+
+      console.log("FROM ARCHIVE: ", this.dailyData)
+    );
+
   }
 
 }

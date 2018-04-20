@@ -12,6 +12,8 @@ import { DayService } from '../day.service';
 
 export class SearchComponent implements OnInit {
   testVal = "fubar";
+  foo: string;
+  
   imageData = {
     imageUrl: '',
     date: '',
@@ -20,7 +22,6 @@ export class SearchComponent implements OnInit {
   }
 
   constructor(private http: HttpClient, private dayService: DayService) { }
-  foo: string;
 
   ngOnInit() {
 
